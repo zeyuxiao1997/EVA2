@@ -1,0 +1,28 @@
+experiment: EVFI_test
+
+data:
+    path: /gdata2/xiaozy/EventSR/h5_fast_test
+    output_path: ./tmp
+    time_bins: 5
+
+dataloader:
+    batch_size: 4
+    shuffle: False
+    num_workers: 1
+    pin_memory: True
+    drop_last: False
+
+data_augment:
+    enabled: True
+    augment: ["Horizontal", "Vertical", "Polarity"]
+    augment_prob: [0.5, 0.5, 0.5]
+
+add_hot_pixels:
+    enabled: True
+    hot_pixel_std: 0.1
+    hot_pixel_fraction: 0.0001
+
+add_noise:
+    enabled: True
+    noise_std: 0.1
+    noise_fraction: 1.0

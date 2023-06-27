@@ -1,0 +1,27 @@
+experiment: hqf_EVFINet_skipframe31-New0823_allhqf
+
+output_path: /gdata2/xiaozy/Result_EVINet_Vimeo
+
+dataloader:
+    path: /gdata2/xiaozy/EventSR/hqf/tmp
+    args:
+        batch_size: 1
+        shuffle: False
+        num_workers: 0
+        pin_memory: True
+        drop_last: False
+    dataset:
+        time_bins: 5
+        skip_frame: 31 # skipped frame
+        data_augment:
+            enabled: False # diable when eval
+            augment: ["Horizontal", "Vertical", "Polarity"]
+            augment_prob: [0.5, 0.5, 0.5]
+        add_hot_pixels:
+            enabled: False # diable when eval
+            hot_pixel_std: 0.1
+            hot_pixel_fraction: 0.0001
+        add_noise:
+            enabled: False # diable when eval
+            noise_std: 0.1
+            noise_fraction: 1.0
