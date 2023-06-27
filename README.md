@@ -1,5 +1,4 @@
 EVA2: Event-Assisted Video Frame Interpolation via Cross-Modal Alignment and Aggregation
-
 ====
 Zeyu Xiao, Wenming Weng, Yueyi Zhang, and Zhiwei Xiong. [EVA2: Event-Assisted Video Frame Interpolation via Cross-Modal Alignment and Aggregation](https://ieeexplore.ieee.org/abstract/document/9982428). In TCI 2022. <br/>
 
